@@ -1,11 +1,17 @@
 import React from 'react';
+import MenuBar from '../MenuBar';
 
-import { Container } from './styles';
+import { 
+  Container,
+  Wrapper 
+} from './styles';
 
 const Layout: React.FC = () => {
   return(
       <Container>
-          <h1>hellow Word</h1>
+         <Wrapper>
+           <MenuBar />
+         </Wrapper>
       </Container>
   );
 }
