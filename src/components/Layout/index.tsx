@@ -1,4 +1,5 @@
 import React from 'react';
+import Banner from '../Banner';
 import MenuBar from '../MenuBar';
 
 import { 
@@ -11,6 +12,7 @@ const Layout: React.FC = () => {
       <Container>
          <Wrapper>
            <MenuBar />
+           <Banner />
          </Wrapper>
       </Container>
   );

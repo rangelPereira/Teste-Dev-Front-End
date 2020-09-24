@@ -8,7 +8,6 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    color: var(--white);
   }
 
   html, body, #root{
@@ -22,7 +21,7 @@ export default createGlobalStyle`
   *, button, input{
       border: 0;
       background: none;
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Nunito';
   }
   *:hover{
     transition: all 0.2s;
