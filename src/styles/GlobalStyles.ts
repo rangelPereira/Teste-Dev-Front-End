@@ -34,5 +34,6 @@ export default createGlobalStyle`
     --primary: #fff;
     --secondary: #000;
     --flag: #F8475F;
+    --productDetails: #7A7A7A;
   }
 `;

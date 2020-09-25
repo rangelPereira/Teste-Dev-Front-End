@@ -11,7 +11,7 @@ export const Banner01 = styled.div`
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.55);
     background-image: url(${banner01});
-    background-size: cover;
+    background-size: cover;    
 
     display:flex;
     flex-direction: column;

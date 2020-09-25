@@ -7,6 +7,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    background-color: #fff;
+
     height: 60px;
     padding: 0 20px;
 

@@ -1,6 +1,13 @@
 import React, {useEffect, useState} from 'react';
+import Carousel from 'react-elastic-carousel';
 import { APIProduct } from '../../@types';
-import { Container } from './styles';
+import Products from '../Products';
+import { 
+  Container,
+  ListName,
+  BorderSpan
+} from './styles';
+
 
 interface Data{
   products?:APIProduct[];
@@ -26,14 +33,36 @@ const ListProducts: React.FC = () => {
 
 
   if(!data?.products ){
-    return <h1>Loading...</h1>
+    return <h2>Loading...</h2>
   }
+
+  const breakPoints =[
+    {width: 500, itemsToShow: 2},
+    {width: 768, itemsToShow: 3},
+    {width: 1150, itemsToShow: 4},
+  ]
 
   return(
     <Container>
-      {data.products.map((item) => (
-          <p>{item.productName}</p>
-      ))}
+      <ListName>Mais Vendidos</ListName>
+      <BorderSpan></BorderSpan>
+
+      <Carousel 
+      breakPoints={breakPoints}
+      showArrows={false}
+      >
+        {data.products.map((item) => (
+            <Products
+              key={item.productId}
+              productName={item.productName}
+              stars={item.stars}
+              imageUrl={item.imageUrl}
+              listPrice={item.listPrice}
+              price={item.price}
+            />
+        ))}
+      </Carousel>
+      
     </Container>
   );
 };
