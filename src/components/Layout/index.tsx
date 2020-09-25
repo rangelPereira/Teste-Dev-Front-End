@@ -1,10 +1,11 @@
 import React from 'react';
 import Banner from '../Banner';
 import MenuBar from '../MenuBar';
+import ListProducts from '../ListProducts';
 
 import { 
   Container,
-  Wrapper 
+  Wrapper
 } from './styles';
 
 const Layout: React.FC = () => {
@@ -13,6 +14,7 @@ const Layout: React.FC = () => {
          <Wrapper>
            <MenuBar />
            <Banner />
+           <ListProducts />
          </Wrapper>
       </Container>
   );

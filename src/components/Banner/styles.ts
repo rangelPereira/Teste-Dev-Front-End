@@ -22,11 +22,11 @@ export const Banner01 = styled.div`
     padding:30px 20px;
     color:var(--primary);
 
-    > text:first-child {
+    > span:first-child {
         font-weight:700;
         font-size:20px;
     }
-    > text:last-child {
+    > span:last-child {
         font-weight:900;
         font-size: 30px;
     }

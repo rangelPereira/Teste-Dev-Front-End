@@ -11,8 +11,8 @@ const Banner: React.FC = () => {
       <Container>
           <Wrapper >
                 <Banner01>
-                        <text>Olá, o que você está buscando?</text> <br/>
-                        <text>Criar ou migrar seu e-commerce?</text>
+                        <span>Olá, o que você está buscando?</span> <br/>
+                        <span>Criar ou migrar seu e-commerce?</span>
                 </Banner01>
           </Wrapper>
       </Container>
