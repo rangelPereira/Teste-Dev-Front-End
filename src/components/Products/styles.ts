@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { MdStar, MdStarBorder } from '../../styles/icons';
+
 
 export const Container = styled.div`
     display: flex;
@@ -6,9 +8,36 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
+    position:relative;
+
     height:300px;
-    width:100%;
+    overflow: hidden;
 `;
+
+export const Flag = styled.div`
+    background: #F8475F;
+
+    position:absolute;
+    right:0;
+
+    transform: rotate(45deg);
+    margin-right: -40px;
+    margin-top: -40px;
+
+    width: 80px;
+    height: 80px;
+    >span{
+
+        color: #fff;
+        font-size: 10px;
+
+        margin-left: 30px;
+        transform: rotate(-45deg);
+        position: absolute;
+        margin-top: 60px;
+    }
+`;
+
 export const ProductImage = styled.img`
     width: 140px;
 `;
@@ -26,6 +55,15 @@ export const ProductsStar = styled.span`
     display: flex;
     justify-content: center;
 `;
+
+export const Star = styled(MdStar)`
+        color: #F8475F;
+
+`
+export const StarBorder = styled(MdStarBorder)`
+        color: #F8475F;
+
+`
 
 export const ProductListPrice = styled.div`
     font-weight: bold;

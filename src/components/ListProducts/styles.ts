@@ -8,14 +8,25 @@ export const Container = styled.div`
     >.rec .rec-slider-container{
         margin:0px;
     }
+
+    >.rec .rec-dot {
+        box-shadow: none;
+        background: #BDBDBD;
+
+        height:7px;
+        width:7px;
+
+    }
+    >.rec .rec-dot_active{
+        background: #F8475F;
+    }
+
 `;
 
 export const BorderSpan = styled.div`
     border-bottom: 5px solid #C0C0C0;
     width:65px;
     margin-left: 10px;
-
-
 `;
 
 export const ListName = styled.h2`

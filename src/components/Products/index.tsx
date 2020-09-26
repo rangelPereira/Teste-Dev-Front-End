@@ -1,14 +1,16 @@
 import React from 'react';
-import { MdStar } from '../../styles/icons';
 
 import { 
     Container,
+    Flag,
     ProductImage,
     ProductName,
     ProductsStar,
     ProductListPrice,
     ProductPrice,
     ButtonBuy,
+    Star,
+    StarBorder
 } from './styles';
 
 interface Porps{
@@ -27,21 +29,39 @@ const Products: React.FC<Porps> = ({
     listPrice,
     price,
 }) => {
+  let oldPrice = '';
+  let flagOff = [];
+
+  if(listPrice){
+    oldPrice = (listPrice/100).toLocaleString('pt-br', {minimumFractionDigits: 2, style: 'currency', currency: 'BRL'});
+    flagOff.push(<Flag><span>OFF</span></Flag>);
+  }
+
+  const rating = () => {
+    let averageStars = stars
+    let starsRating = []
+
+    for(let i = 1;i <= 5; i++)
+    {
+      starsRating.push(<span> {i <= averageStars ? <Star /> : <StarBorder />}  </span>)
+    }
+
+  return starsRating;
+  }
+
   return(
       <Container>
+        {flagOff}
         <ProductImage src={imageUrl} />
         <ProductName>{productName}</ProductName>
-        
-        <ProductsStar>
-          <MdStar />
-          <MdStar />
-          <MdStar />
-          <MdStar />
-          <MdStar />
+
+        <ProductsStar >
+          {rating()}
+ 
         </ProductsStar>
         
 
-        <ProductListPrice>{listPrice}</ProductListPrice>
+        <ProductListPrice>{oldPrice}</ProductListPrice>
 
         <ProductPrice>{(price/100).toLocaleString('pt-br', {minimumFractionDigits: 2, style: 'currency', currency: 'BRL'})}</ProductPrice>
 
