@@ -3,5 +3,6 @@ export {
     MdSearch,
     MdShoppingCart,
     MdStar,
-    MdStarBorder
+    MdStarBorder,
+    MdHeadsetMic
 } from "react-icons/md";

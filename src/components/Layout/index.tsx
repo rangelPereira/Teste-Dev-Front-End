@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Banner';
 import MenuBar from '../MenuBar';
 import ListProducts from '../ListProducts';
+import Footer from '../Footer';
 
 import { 
   Container,
@@ -16,6 +17,7 @@ const Layout: React.FC = () => {
            <Banner />
            <ListProducts />
          </Wrapper>
+         <Footer />
       </Container>
   );
 }

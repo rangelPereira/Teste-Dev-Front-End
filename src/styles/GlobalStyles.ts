@@ -21,7 +21,7 @@ export default createGlobalStyle`
   *, button, input{
       border: 0;
       background: none;
-      font-family: 'Nunito';
+      font-family: 'Nunito', sans-serif;
   }
   *:hover{
     transition: all 0.2s;
