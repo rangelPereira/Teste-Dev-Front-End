@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     padding:5px;
-    max-width:1160px;
+    max-width:1280px;
     margin:auto;
 
     >.rec .rec-slider-container{
@@ -19,6 +19,30 @@ export const Container = styled.div`
     }
     >.rec .rec-dot_active{
         background: #F8475F;
+    }
+
+    >.rec .rec-arrow{
+        display:none;
+    }
+
+    @media(min-width:1150px){
+        padding-top: 25px;
+
+        padding-bottom: 60px;
+
+        >.rec .rec-arrow{
+            display:unset;
+            margin:-60px;
+            z-index:2;
+
+            background:#fff;
+            box-shadow:none;
+            color:var(--secundary);
+        }
+        
+        >.rec .rec-dot {
+            display:none;
+        }
     }
 
 `;

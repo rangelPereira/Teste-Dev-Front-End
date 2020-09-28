@@ -4,6 +4,7 @@ import Vtex from '../../styles/imgs/vtex.png';
 
 import { 
     Container,
+    Wrapper,
     Description,
     Location,
     BorderSpan,
@@ -21,6 +22,7 @@ import {
 const Footer: React.FC = () => {
   return(
       <Container>
+        <Wrapper>
           <Description>
             <Location>Localização </Location>
             <BorderSpan></BorderSpan>
@@ -53,6 +55,7 @@ const Footer: React.FC = () => {
                 <VtexImg src={Vtex} />
             </Powered>
           </Copywriter>
+        </Wrapper>
       </Container>
   );
 }

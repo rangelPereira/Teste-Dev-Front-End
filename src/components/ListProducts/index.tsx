@@ -49,7 +49,6 @@ const ListProducts: React.FC = () => {
 
       <Carousel 
       breakPoints={breakPoints}
-      showArrows={false}
       >
         {data.products.map((item) => (
             <Products

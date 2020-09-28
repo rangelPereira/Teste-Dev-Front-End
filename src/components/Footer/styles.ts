@@ -9,7 +9,29 @@ export const Container = styled.div`
     color: var(--primary);
 `;
 
+export const Wrapper = styled.div`
+    @media(min-width:768px){
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-areas:
+            "local contacts create"
+        ;
+
+        justify-content:space-between;
+        align-items: center;    
+
+        max-width: 1280px;
+        padding:25px 0;
+        margin: auto;
+    }
+`;
+
+
 export const Description = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
     > p{
     font-weight: normal;
     font-size: 15px;
@@ -18,6 +40,7 @@ export const Description = styled.div`
 `;
 
 export const Location = styled.div`
+    grid-area:local;
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
@@ -27,11 +50,10 @@ export const BorderSpan = styled.div`
     border-bottom: 5px solid var(--primary);
     width:65px;
     margin: 10px 0px;
-
-    
 `;
 
 export const Contacts = styled.div`
+    grid-area:contacts;
 
 `;
 
@@ -52,20 +74,32 @@ export const ButtonContacts = styled.div`
         font-size: 12px;
         margin-left:15px;
     }
+
+    @media(min-width:768px){
+        width: 50%;
+        margin:20px auto;
+
+    }
 `;
 
 export const Copywriter = styled.div`
+    grid-area:create;
+
     display:flex;
     justify-content:space-between;
 
     width: 90%;
     margin: auto;
 
-    
+    @media(min-width:768px){
+        justify-content:unset;
+    }
 
 `;
 
 export const Created = styled.div`
+    padding-right: 30px;
+
 > p {
         font-size: 10px;
         line-height: 14px;

@@ -8,6 +8,7 @@ import {
   Container,
   Wrapper
 } from './styles';
+import NewsLetter from '../NewsLetter';
 
 const Layout: React.FC = () => {
   return(
@@ -17,6 +18,7 @@ const Layout: React.FC = () => {
            <Banner />
            <ListProducts />
          </Wrapper>
+         <NewsLetter />
          <Footer />
       </Container>
   );

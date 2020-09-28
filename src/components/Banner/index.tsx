@@ -3,7 +3,8 @@ import React from 'react';
 import { 
     Container,
     Wrapper,
-    Banner01
+    Banner01,
+    RigthSide
 } from './styles';
 
 const Banner: React.FC = () => {
@@ -11,8 +12,10 @@ const Banner: React.FC = () => {
       <Container>
           <Wrapper >
                 <Banner01>
-                        <span>Olá, o que você está buscando?</span> <br/>
+                    <RigthSide>
+                        <span>Olá, o que você está buscando?</span>
                         <span>Criar ou migrar seu e-commerce?</span>
+                    </RigthSide>
                 </Banner01>
           </Wrapper>
       </Container>
